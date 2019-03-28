@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id='author'>
+    <input type='button' value='add author' onClick='addAuthor()'>
+    <div id='output'></div>
+    <script>
+        var authorList = [];
+
+        function addAuthor() {
+
+            var favorAuthor = document.getElementById('author').value;
+            authorList.push(favorAuthor);
+
+            function listAuthor() {
+                var html = '';
+                var output = document.getElementById('output');
+                for (x = 0; x < authorList.length; x++) {
+                    html += (x + 1) + '. ' + authorList[x] + '<br>';
+                }
+                output.innerHTML = html;
+            }
+            listAuthor();
+        }
+    </script>
+
+</body>
+
+</html>
