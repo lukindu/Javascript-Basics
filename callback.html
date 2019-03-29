@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="output"></div>
+
+</body>
+<script>
+    //(callback functions)
+    var output = document.getElementById('output');
+
+    function message(a, b, name) {
+        var hello = name(a, b)
+        output.innerHTML = hello;
+    }
+    message('hello', 'world', function(a, b) {
+        var hello2 = a + b + 'here';
+        return hello2
+    })
+</script>
+
+</html>
