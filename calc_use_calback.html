@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Number 1: <input type="text" id="Num1"> Number 2: <input type="text" id="Num2"> <br>
+    <input type=button onclick="Addby()" value="Add">
+    <input type=button onclick="Substractby()" value="Subtract">
+    <input type=button onclick="Multipyby()" value="Multiply">
+    <input type=button onclick="Divideby()" value="Divide">
+    <div id="output"></div>
+
+</body>
+<script>
+    let output = document.getElementById('output');
+    let Num1 = document.getElementById('Num1')
+    let Num2 = document.getElementById('Num2')
+
+    function Addby() {
+        callback(Num1.value, Num2.value, '+', function(a, b) {
+            return a + b;
+        })
+    }
+
+    function callback(a, b, s, cback) {
+        var result = cback(Number(a), Number(b));
+        output.innerHTML += a + ' ' + '+' + b + ' ' + '=' + result + ''
+
+    }
+</script>
+
+</html>
