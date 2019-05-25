@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="wrapper"> page one</div>
+    <input type="text" id = 'url' name="url" value="link">
+    <input type="button" onclick="goUrl()" value = 'Go to URL'>;
+  <script>;
+    var output = document.getElementById('wrapper');
+    function goUrl(){
+      var url = document.getElementById ('url').value
+      window.location = url
+    };
+  </script>
+  </body>
+</html>
